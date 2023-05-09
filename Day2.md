@@ -326,10 +326,10 @@ sudo vi /etc/yum.repos.d/local.repo
 ubuntu@ip-172-31-17-37:~$ ssh elastic0
 ```
 ```
-[elastic@elastic0 ~]$ mkdir ~/archive
+mkdir ~/archive
 ``` 
 ```
-[elastic@elastic0 ~]$ sudo mv /etc/yum.repos.d/* ~/archive
+sudo mv /etc/yum.repos.d/* ~/archive
 ```
 ```
 [elastic@elastic0 ~]$ ll
@@ -342,7 +342,7 @@ total 52
 .
 ```
 ```
-[elastic@elastic0 ~]$ sudo vi /etc/yum.repos.d/local.repo
+sudo vi /etc/yum.repos.d/local.repo
 ```
 ```
 [local-base]
