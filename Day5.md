@@ -234,15 +234,26 @@ zookeeper.connection.timeout.ms=30000
 - do every pipeline and update lines 2, 7, and 10
 
 ```
+sudo firewall-cmd --add-port=9092/tcp --permanent
+```
+```
+[elastic@pipeline0 ~]$ sudo firewall-cmd --reload
+```
+```
 [elastic@pipeline0 /]$ sudo systemctl start kafka           
 ```
 ```
 [elastic@pipeline0 /]$ sudo systemctl status kafka
 ```
-- on every pipeline
+- add kafka port
+- allow it
+- start and verify
+
+> do on every pipeline  
+> ---
 >  __dont enable kafka before zookeeper__ 
 
-### EXAMPLE FOR CREATING & DELETING TOPIC
+### CREATING & DELETING TOPIC
 ```
 [elastic@pipeline0 /]$ sudo /usr/share/kafka/bin/kafka-topics.sh --bootstrap-server pipeline0:9092 --create --topic test --partitions 3 --replication-factor 3
 ```
