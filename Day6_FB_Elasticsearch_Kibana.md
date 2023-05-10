@@ -122,7 +122,7 @@ http.port:9200
 network.host: _local:ipv4_
 discovery.type: single-node
  ```
-- #### **`THIS IS FOR SINGLE NODE`**
+> __THIS IS FOR SINGLE NODE__
 
 OR
 
@@ -138,7 +138,7 @@ discovery.seed_hosts: ["elastic0", "elastic1", "elastic2"]
 cluster.initial_master_nodes: ["es-node-0", "es-node-1", "es-node-2"]
 ```
 
-- #### **`THIS IS FOR CLUSTER.`**
+> __THIS IS FOR CLUSTER.__
 
 > __UPDATE NODE NAME.__
 
