@@ -140,7 +140,7 @@ cluster.initial_master_nodes: ["es-node-0", "es-node-1", "es-node-2"]
 
 - #### **`THIS IS FOR CLUSTER.`**
 
-- do on each elastic node change node name for each one.
+> __UPDATE NODE NAME.__
 
 ```
 [elastic@elastic0 ~]$ sudo chmod 640 /etc/elasticsearch/elasticsearch.yml
@@ -239,7 +239,12 @@ success
 
 
 ```
-curl elastic0:9200/_cat/nodes
+[elastic@elastic0 ~]$ curl elastic0:9200/_cat/nodes?v
+
+ip           heap.percent ram.percent cpu load_1m load_5m load_15m node.role master name
+10.81.139.31           51          56   0    1.87    1.71     1.45 dilmrt    *      es-node-1
+10.81.139.30           18          56   0    1.87    1.71     1.45 dilmrt    -      es-node-0
+10.81.139.32           35          55   0    1.87    1.71     1.45 dilmrt    -      es-node-2
 ```
 - verify cluster is set up
 - add ?v to show header so you know what the info is
