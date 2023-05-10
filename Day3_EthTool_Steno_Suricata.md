@@ -5,7 +5,7 @@
 ```
 [elastic@sensor ~]$ sudo yum install ethtool
 ```
-- install eth tool to manage nics. now using local-base instead of sentos
+- install eth tool to manage nics. now using local-base instead of CentOS
 - `eth0 management intercface. eth1 capture interface.`
 
 ```

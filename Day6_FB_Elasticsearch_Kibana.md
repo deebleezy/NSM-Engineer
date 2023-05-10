@@ -27,8 +27,16 @@
 [elastic@sensor filebeat]$ sudo vi /etc/filebeat/filebeat.yml
 ```
 ```
-     33 output.kafka:
-     34   hosts: ["pipeline:9092","pipeline1:9092","pipeline2:9092"]
+      2 filebeat.inputs:
+      3   - type: log
+      4     enabled: true
+      5     paths:
+      6       - /data/suricata/eve.json
+
+```
+```
+      33 output.kafka:
+      34   hosts: ["pipeline0:9092","pipeline1:9092" "pipeline2:9092"]
 ```
 - pointing it to pipelines cus thats where kafka lives. not localhost.
 
@@ -406,33 +414,6 @@ Changed: 6
 Failed: 0
 ```
 - pushing over indexs from pipeline0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-blah
-
-blah  
-
-blah
-
-
-
-
-
-
-
-
 
 
 
