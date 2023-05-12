@@ -39,7 +39,7 @@ Filebeat
 - 
 
 Kibana unreachable
-- sudo firewall-cmd --list-al
+- sudo firewall-cmd --list-all
     - fireall had port 8080 not 80
     - sudo fireall-cmd --remove-port=8080/tcp --permanent
     - sudo fireall-cmd --add-port=80/tcp --permanent
